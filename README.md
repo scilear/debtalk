@@ -1,6 +1,6 @@
 # Debtalk
 
-> Effortlessly capture, transcribe, and inject your spoken words into any app. Designed for polished efficiency on Debian-based Linux systems. Open source, privacy-forward, works locally.
+> Effortlessly capture, transcribe, and inject your spoken words into any app. Designed for efficiency on Debian-based Linux systems. Open source, privacy-forward, works locally.
 
 ---
 
