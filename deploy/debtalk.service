@@ -1,0 +1,15 @@
+[Unit]
+Description=Debtalk speech-to-text hotkey daemon
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Documents/Debtalk
+ExecStart=%h/Documents/Debtalk/.venv/bin/debtalk
+Restart=on-failure
+RestartSec=2
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target

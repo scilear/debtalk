@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+debtalk/__init__.py
+debtalk/app.py
+debtalk/audio.py
+debtalk/config.py
+debtalk/main.py
+debtalk/output.py
+debtalk/transcriber.py
+debtalk.egg-info/PKG-INFO
+debtalk.egg-info/SOURCES.txt
+debtalk.egg-info/dependency_links.txt
+debtalk.egg-info/entry_points.txt
+debtalk.egg-info/requires.txt
+debtalk.egg-info/top_level.txt
