@@ -1,0 +1,34 @@
+# Debtalk
+
+> Effortlessly capture, transcribe, and inject your spoken words into any app. Designed for polished efficiency on Debian-based Linux systems. Open source, privacy-forward, works locally.
+
+---
+
+**Debtalk** turns your voice into typed text, instantly, anywhere on your desktop. It's fast, lean, and beautifully integrated for Debian—and other Linux users.
+
+- 🗣️ Speak naturally, let Debtalk work its transcription magic in real-time.
+- 💻 Seamless injection: your text lands where you want it, clipboard fallback included.
+- 🚀 Zero cloud, zero compromise, fully open source and privacy-respecting.
+
+## Features
+- Designed for Debian distros (Ubuntu, Raspberry Pi OS, etc.)
+- Runs as a background service for rapid desktop integration
+- Real-time microphone capture, chunking, and fast transcription (Uses faster-whisper engine)
+- Easy config, hotkey activation, output fallback for any desktop app
+- Clean, modular Python codebase
+
+## Installation
+```sh
+bash install.sh
+```
+
+Check [README.md](README.md) for command details.
+
+## License
+Licensed under the MIT License.
+
+---
+
+**Polished. Efficient. Yours.**
+
+Contributions warmly welcome!
