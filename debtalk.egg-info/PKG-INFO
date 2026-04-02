@@ -11,66 +11,35 @@ Requires-Dist: sounddevice>=0.5
 
 # Debtalk
 
-Debtalk is a local speech-to-text hotkey tool for Linux Mint. It records microphone audio, splits dictation into silence-delimited chunks, transcribes them with `faster-whisper`, and injects the resulting text into the focused application when possible.
+> Effortlessly capture, transcribe, and inject your spoken words into any app. Designed for efficiency on Debian-based Linux systems. Open source, privacy-forward, works locally.
 
-## Status
+---
 
-This implementation is designed for Linux desktop sessions with the best support on X11.
+**Debtalk** turns your voice into typed text, instantly, anywhere on your desktop. It's fast, lean, and beautifully integrated for Debian—and other Linux users.
 
-- Global hotkey: `Ctrl+Space`
-- Audio capture: default microphone via PortAudio / `sounddevice`
-- Chunking: silence threshold + minimum and maximum chunk duration
-- STT backend: `faster-whisper`
-- Output: `xdotool` on X11, `wtype` or `ydotool` on Wayland when available, clipboard fallback otherwise
+- 🗣️ Speak naturally, let Debtalk work its transcription magic in real-time.
+- 💻 Seamless injection: your text lands where you want it, clipboard fallback included.
+- 🚀 Zero cloud, zero compromise, fully open source and privacy-respecting.
 
-## Install
+## Features
+- Designed for Debian distros (Ubuntu, Raspberry Pi OS, etc.)
+- Runs as a background service for rapid desktop integration
+- Real-time microphone capture, chunking, and fast transcription (Uses faster-whisper engine)
+- Easy config, hotkey activation, output fallback for any desktop app
+- Clean, modular Python codebase
 
-Run the installer:
-
-```bash
+## Installation
+```sh
 bash install.sh
 ```
 
-The script:
+Check [README.md](README.md) for command details.
 
-- installs the required apt packages
-- creates `.venv`
-- installs Debtalk with `pip install -e .`
-- writes the user service into `~/.config/systemd/user/debtalk.service`
-- enables and starts the service
-- prints the generated config path
+## License
+Licensed under the MIT License.
 
-If you prefer doing it manually, the service template is in `deploy/debtalk.service`.
-If `pynput` needs to build `evdev`, the required compiler and Python headers are installed by the script via `build-essential` and `python3-dev`.
+---
 
-## Configuration
+**Polished. Efficient. Yours.**
 
-```toml
-[app]
-hotkey = "<ctrl>+<space>"
-
-[audio]
-sample_rate = 16000
-block_duration_ms = 30
-silence_threshold = 700
-silence_seconds = 0.75
-min_chunk_seconds = 5.0
-max_chunk_seconds = 20.0
-
-[whisper]
-model_size = "base"
-language = ""
-compute_type = "auto"
-device = "auto"
-
-[output]
-clipboard_fallback = true
-notify = true
-typing_interval_ms = 4
-```
-
-## Notes
-
-- X11 is the primary target. Global hotkeys and text injection under Wayland depend on compositor permissions and installed tools.
-- `faster-whisper` downloads models on first use.
-- If text injection fails, Debtalk copies the transcription to the clipboard and shows a notification when enabled.
+Contributions warmly welcome!
